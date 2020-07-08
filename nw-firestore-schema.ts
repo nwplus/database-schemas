@@ -12,21 +12,18 @@ interface Event {
 }
 
 interface WebsiteData {
-  Sponsors: Sponsor[];
-  Events: Event[];
-  Extra: {
-    [key]: any;
-  };
+  [key]: any;
+  //eg
+  Intro: {
+    title: "hello",
+    imgURL: "link"
+  }
 }
 
 interface DayOfEvent {
   name: "name";
   type: "meal" | "workshop";
   time: "time/day its happening";
-}
-
-interface DayOfData {
-  Events: DayOfEvent[];
 }
 
 interface Application {
@@ -51,7 +48,9 @@ interface Hackathon {
   Applicants: Application[];
   Hackers: Hacker[];
   WebsiteData: WebsiteData;
-  DayOf: DayOfData;
+  Sponsors: Sponsor[];
+  Events: Event[];
+  DayOf: DayOfEvent[];
 }
 
 interface FAQ {
