@@ -62,5 +62,4 @@ interface FAQ {
 interface Root {
   Hackathons: Hackathon[];
   FAQ: FAQ[];
-  HackathonIDs: string[]; //List of all the hackathons we have
 }
