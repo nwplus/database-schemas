@@ -15,7 +15,19 @@ interface WebsiteData {
   [key]: any;
   //eg
   Intro: {
-    title: "hello",
+    title: "Intro",
+    content: "Come make things and break things, and then make them cooler. You'll never be short on inspiration when you're surrounded by 650 of the brightest minds in the Pacific Northwest. All you need to bring is an open mind and an insatiable desire to learn; we'll take care of the rest. After all, we're western Canada's largest hackathon - we make the west coast the best coast",
+    editor: "Derek Chen",
+    header: "This is nwHacks 2019",
+    time: "July 14, 2020 at 10:30:03 AM UTC-7",
+    imgURL: "link"
+  },
+  otherSection: {
+    title: "Other Text Section(s)",
+    content: "Vancouver is breathtaking and so are you",
+    editor: "Ian Mah",
+    header: "Why nwHacks?",
+    time: "July 8, 2020 at 12:00:00PM UTC-7",
     imgURL: "link"
   }
 }
