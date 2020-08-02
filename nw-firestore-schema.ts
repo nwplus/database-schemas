@@ -3,6 +3,7 @@ interface Sponsor {
   url: "apple.com";
   imgURL: "link-to-image";
   lastmod: Date().toLocaleString(),
+  teir: "platinum"
 }
 
 interface Event {
@@ -10,6 +11,7 @@ interface Event {
   description: "this is an event";
   imgURL?: "link-to-event-image";
   order: "ordering of the event";
+  
 }
 
 interface WebsiteData {
