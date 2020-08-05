@@ -69,6 +69,7 @@ interface Hackathon {
 interface FAQ {
   question: string;
   answer: string;
+  category: string;
   hackathonIDs: string[]; // Must be one of the hackathon IDs
 }
 
