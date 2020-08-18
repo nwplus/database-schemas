@@ -33,10 +33,24 @@ interface WebsiteData {
   }
 }
 
+interface LivesiteData {
+  [key]: any;
+  announcements: Announcement[];
+  links: Link[];
+  startTime: "July 8, 2020 at 12:00:00PM UTC-7";
+  endTime: "July 9, 2020 at 12:00:00PM UTC-7";
+}
+
+interface Link {
+  label: string;
+  href: string;
+}
+
 interface DayOfEvent {
   name: "name";
   type: "meal" | "workshop";
-  time: "time/day its happening";
+  startTime: "July 8, 2020 at 12:00:00PM UTC-7";
+  endTime: "July 8, 2020 at 2:00:00PM UTC-7";
 }
 
 interface Application {
@@ -64,6 +78,15 @@ interface Hackathon {
   Sponsors: Sponsor[];
   Events: Event[];
   DayOf: DayOfEvent[];
+  LivesiteData: LivesiteData;
+}
+
+interface Announcement {
+  title: string;
+  content: string;
+  timestamp: string;
+  priority: string;
+  editor: string;
 }
 
 interface FAQ {
