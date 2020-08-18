@@ -14,6 +14,8 @@ interface Event {
 
 interface WebsiteData {
   [key]: any;
+  startTime: string;
+  endTime: string;
   //eg
   Intro: {
     title: "Intro",
@@ -33,15 +35,7 @@ interface WebsiteData {
   }
 }
 
-interface LivesiteData {
-  [key]: any;
-  announcements: Announcement[];
-  links: Link[];
-  startTime: "July 8, 2020 at 12:00:00PM UTC-7";
-  endTime: "July 9, 2020 at 12:00:00PM UTC-7";
-}
-
-interface Link {
+interface Quicklink {
   label: string;
   href: string;
 }
@@ -78,7 +72,8 @@ interface Hackathon {
   Sponsors: Sponsor[];
   Events: Event[];
   DayOf: DayOfEvent[];
-  LivesiteData: LivesiteData;
+  Announcements: Announcement[];
+  Quicklinks: Quicklink[];
 }
 
 interface Announcement {
