@@ -37,8 +37,8 @@ interface LivesiteData {
   [key]: any;
   announcements: Announcement[];
   links: Link[];
-  duration: number; // duration of hackathon in hours
-  time: string; // timestamp of hackathon start time
+  startTime: "July 8, 2020 at 12:00:00PM UTC-7";
+  endTime: "July 9, 2020 at 12:00:00PM UTC-7";
 }
 
 interface Link {
@@ -49,7 +49,8 @@ interface Link {
 interface DayOfEvent {
   name: "name";
   type: "meal" | "workshop";
-  time: "July 8, 2020 at 12:00:00PM UTC-7";
+  startTime: "July 8, 2020 at 12:00:00PM UTC-7";
+  endTime: "July 8, 2020 at 2:00:00PM UTC-7";
 }
 
 interface Application {
