@@ -33,6 +33,17 @@ interface WebsiteData {
   }
 }
 
+interface LivesiteData {
+  [key]: any;
+  //eg
+  links: Link[];
+}
+
+interface Link {
+  label: string;
+  href: string;
+}
+
 interface DayOfEvent {
   name: "name";
   type: "meal" | "workshop";
@@ -58,12 +69,20 @@ interface Stats {
 
 interface Hackathon {
   id: "lhd"; //(example)
+  Announcements: Announcement[];
   Applicants: Application[];
   Hackers: Hacker[];
   WebsiteData: WebsiteData;
   Sponsors: Sponsor[];
   Events: Event[];
   DayOf: DayOfEvent[];
+  LivesiteData: LivesiteData;
+}
+
+interface Announcement {
+  content: string;
+  timestamp: number;
+  priority: string;
 }
 
 interface FAQ {
