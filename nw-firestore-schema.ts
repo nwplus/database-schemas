@@ -35,8 +35,10 @@ interface WebsiteData {
 
 interface LivesiteData {
   [key]: any;
-  //eg
+  announcements: Announcement[];
   links: Link[];
+  duration: number; // duration of hackathon in hours
+  time: string; // timestamp of hackathon start time
 }
 
 interface Link {
@@ -47,7 +49,7 @@ interface Link {
 interface DayOfEvent {
   name: "name";
   type: "meal" | "workshop";
-  time: "time/day its happening";
+  time: "July 8, 2020 at 12:00:00PM UTC-7";
 }
 
 interface Application {
@@ -69,7 +71,6 @@ interface Stats {
 
 interface Hackathon {
   id: "lhd"; //(example)
-  Announcements: Announcement[];
   Applicants: Application[];
   Hackers: Hacker[];
   WebsiteData: WebsiteData;
