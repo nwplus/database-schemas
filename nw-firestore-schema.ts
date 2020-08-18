@@ -83,6 +83,7 @@ interface Announcement {
   content: string;
   timestamp: number;
   priority: string;
+  editor: string;
 }
 
 interface FAQ {
