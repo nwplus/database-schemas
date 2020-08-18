@@ -82,6 +82,7 @@ interface Hackathon {
 }
 
 interface Announcement {
+  title: string;
   content: string;
   timestamp: number;
   priority: string;
