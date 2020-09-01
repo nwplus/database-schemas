@@ -42,7 +42,7 @@ interface Quicklink {
 
 interface DayOfEvent {
   name: "name";
-  type: "meal" | "workshop";
+  type: "meal" | "workshop" | "hacking";
   startTime: "July 8, 2020 at 12:00:00PM UTC-7";
   endTime: "July 8, 2020 at 2:00:00PM UTC-7";
 }
