@@ -79,7 +79,7 @@ interface Hackathon {
 interface Announcement {
   title: string;
   content: string;
-  timestamp: string;
+  timestamp: number; // ie Date.now()
   priority: string;
   editor: string;
 }
