@@ -38,6 +38,8 @@ interface WebsiteData {
 interface Quicklink {
   label: string;
   href: string;
+  category: string;
+  commonLink: boolean;
 }
 
 interface DayOfEvent {
