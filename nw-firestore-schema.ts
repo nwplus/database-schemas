@@ -91,6 +91,8 @@ interface FAQ {
   answer: string;
   category: string;
   hackathonIDs: string[]; // Must be one of the hackathon IDs
+  lastModified: string;
+  lastModifiedBy: string;
 }
 
 interface Root {
