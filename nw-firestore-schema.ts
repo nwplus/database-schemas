@@ -2,7 +2,9 @@ interface Sponsor {
   name: "apple";
   url: "apple.com";
   imgURL: "link-to-image";
-  lastmod: Date().toLocaleString(),
+  imgName: "name of image in storage";
+  lastmod: Date().toLocaleString();
+  lastmodBy: "username";
 }
 
 interface Event {
