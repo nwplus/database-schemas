@@ -1,8 +1,11 @@
+type Tiers = inKind | bronze | silver | gold | platinum 
+
 interface Sponsor {
   name: "apple";
   url: "apple.com";
   imgURL: "link-to-image";
-  lastmod: Date().toLocaleString(),
+  lastmod: Date().toLocaleString();
+  teir: Tiers = "platinum";
 }
 
 interface Event {
@@ -10,6 +13,7 @@ interface Event {
   description: "this is an event";
   imgURL?: "link-to-event-image";
   order: "ordering of the event";
+  
 }
 
 interface WebsiteData {
