@@ -4,7 +4,9 @@ interface Sponsor {
   name: "apple";
   url: "apple.com";
   imgURL: "link-to-image";
+  imgName: "name of image in storage";
   lastmod: Date().toLocaleString();
+  lastmodBy: "username";
   teir: Tiers = "platinum";
 }
 
@@ -95,6 +97,8 @@ interface FAQ {
   answer: string;
   category: string;
   hackathonIDs: string[]; // Must be one of the hackathon IDs
+  lastModified: string;
+  lastModifiedBy: string;
 }
 
 interface Root {
