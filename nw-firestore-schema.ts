@@ -1,9 +1,11 @@
+type Tiers = inKind | bronze | silver | gold | platinum 
+
 interface Sponsor {
   name: "apple";
   url: "apple.com";
   imgURL: "link-to-image";
-  lastmod: Date().toLocaleString(),
-  teir: "platinum"
+  lastmod: Date().toLocaleString();
+  teir: Tiers = "platinum";
 }
 
 interface Event {
@@ -16,6 +18,8 @@ interface Event {
 
 interface WebsiteData {
   [key]: any;
+  startTime: string;
+  endTime: string;
   //eg
   Intro: {
     title: "Intro",
@@ -35,10 +39,18 @@ interface WebsiteData {
   }
 }
 
+interface Quicklink {
+  label: string;
+  href: string;
+  category: string;
+  commonLink: boolean;
+}
+
 interface DayOfEvent {
   name: "name";
-  type: "meal" | "workshop";
-  time: "time/day its happening";
+  type: "meal" | "workshop" | "hacking";
+  startTime: "July 8, 2020 at 12:00:00PM UTC-7";
+  endTime: "July 8, 2020 at 2:00:00PM UTC-7";
 }
 
 interface Application {
@@ -66,11 +78,22 @@ interface Hackathon {
   Sponsors: Sponsor[];
   Events: Event[];
   DayOf: DayOfEvent[];
+  Announcements: Announcement[];
+  Quicklinks: Quicklink[];
+}
+
+interface Announcement {
+  title: string;
+  content: string;
+  timestamp: number; // ie Date.now()
+  priority: string;
+  editor: string;
 }
 
 interface FAQ {
   question: string;
   answer: string;
+  category: string;
   hackathonIDs: string[]; // Must be one of the hackathon IDs
 }
 
