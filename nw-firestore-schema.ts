@@ -45,7 +45,7 @@ interface Quicklink {
   label: string;
   href: string;
   category: string;
-  commonLink: boolean;
+  common: boolean;
 }
 
 interface DayOfEvent {
