@@ -7,7 +7,7 @@ interface Sponsor {
   imgName: "name of image in storage";
   lastmod: Date().toLocaleString();
   lastmodBy: "username";
-  teir: Tiers = "platinum";
+  tier: Tiers = "platinum";
 }
 
 interface Event {
