@@ -105,3 +105,8 @@ interface Root {
   Hackathons: Hackathon[];
   FAQ: FAQ[];
 }
+
+interface Livesite {
+  imgURL: string; // url to logo image
+  activeHackathon: string; // hackathon ID
+}
