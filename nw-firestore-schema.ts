@@ -101,7 +101,17 @@ interface FAQ {
   lastModifiedBy: string;
 }
 
+interface CMS {
+  CMSOff: boolean;
+  OffUntilDate: timestamp;
+}
+
+interface InternalWebsites {
+  CMS: CMS;
+}
+
 interface Root {
   Hackathons: Hackathon[];
   FAQ: FAQ[];
+  InternalWebsites: InternalWebsites;
 }
