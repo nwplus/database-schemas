@@ -102,8 +102,7 @@ interface FAQ {
 }
 
 interface CMS {
-  CMSOff: boolean;
-  OffUntilDate: timestamp;
+  offUntilDate: timestamp | false;
 }
 
 interface InternalWebsites {
