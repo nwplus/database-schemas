@@ -107,6 +107,7 @@ interface CMS {
 
 interface InternalWebsites {
   CMS: CMS;
+  Livesite: Livesite;
 }
 
 interface Root {
@@ -118,4 +119,6 @@ interface Root {
 interface Livesite {
   imgURL: string; // url to logo image
   activeHackathon: string; // hackathon ID
+  hackingStartTime: string // ISO Date string
+  hackingEndTime: string // ISO Date string
 }
