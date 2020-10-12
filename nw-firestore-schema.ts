@@ -119,6 +119,8 @@ interface Root {
 interface Livesite {
   imgURL: string; // url to logo image
   activeHackathon: string; // hackathon ID
+  judgingOpen: boolean; // particpants can judge other projects
+  judgingReleased: boolean; // participants can see their judging results
   hackathonStartTime: string // ISO Date string
   hackathonEndTime: string // ISO Date string
   hackingStartTime: string // ISO Date string
