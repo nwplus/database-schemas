@@ -121,8 +121,8 @@ interface Livesite {
   activeHackathon: string; // hackathon ID
   judgingOpen: boolean; // particpants can judge other projects
   judgingReleased: boolean; // participants can see their judging results
-  hackathonStartTime: string // ISO Date string
-  hackathonEndTime: string // ISO Date string
-  hackingStartTime: string // ISO Date string
-  hackingEndTime: string // ISO Date string
+  hackathonStart: string // ISO Date string
+  hackathonEnd: string // ISO Date string
+  hackingStart: string // ISO Date string
+  hackingEnd: string // ISO Date string
 }
