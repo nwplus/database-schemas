@@ -52,7 +52,7 @@ interface Prize {
   place: number | boolean; // number if a main prize, false if sponsor prize
   sponsor: string;
   title: string;
-  content: string; // | delimited 
+  content: string[]; 
 }
 
 interface DayOfEvent {
