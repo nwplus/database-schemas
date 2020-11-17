@@ -57,7 +57,7 @@ interface DayOfEvent {
   description: string;
 }
 
-type EducationLevels = highSchool | bachelors | masters | professional | doctorate
+type EducationLevels = highSchool | undergraduate | graduate | professional | doctorate
 
 type HackerRoles = developer | designer | hardware | product | data | business | other
 
