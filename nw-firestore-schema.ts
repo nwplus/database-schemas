@@ -72,8 +72,16 @@ interface Application {
 interface Hacker {
   name: "john doe";
   email: "something";
-}
+  score: {
+    WebsiteScore: 0,
+    ResumeScore: 3,
+    InterestScore: 2,
+    PassionScore: 5,
+  };
+  applicantResponses: { "Is this your first hackathon?": "yeth" }
+  comments:[]
 
+}
 // Stats are incomplete, I'd like to collect more data but for now this is all I could think of
 interface Stats {
   EventStats: {
