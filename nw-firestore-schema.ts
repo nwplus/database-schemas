@@ -57,16 +57,47 @@ interface DayOfEvent {
   description: string;
 }
 
+type EducationLevels = highSchool | bachelors | masters | professional | doctorate
+
+type HackerRoles = developer | designer | hardware | product | data | business | other
+
+type Engagements = facebook | instagram | twitter | medium | linkedin | event
+
+type ApplicationStatus = applied | accepted | rejected
+
 interface Application {
-  name: "john doe";
-  longAnswer: "blablabla";
+  basicInfo: {
+    email: string;
+    firstName: string;
+    lastName: string;
+    gender: string;
+    ethnicity: string[];
+    isOfLegalAge: boolean;
+    school: string;
+    major: string;
+    educationLevel: EducationLevels = "bachelors";
+    graduation: number;
+    hackathonsAttended: number;
+    contributionRole: HackerRoles;
+    location: string;
+  },
+  skills: {
+    resume: string; // link to resume (pdf, docx, etc.) stored on firebase
+    portfolio: string;
+    linkedin: string;
+    github: string;
+    longAnswers: {
+      ["question number"]: string;
+    }; // hackers will have either one or two questions depending on their role
+  },
+  questionnaire: {
+    engagementSource: Engagements;
+    eventsAttended: string[];
+  }
+  submissionDate: timestamp | boolean;
+  submitted: boolean;
+  status: ApplicationStatus = "applied";
 }
-
-interface Hacker {
-  name: "john doe";
-  email: "something";
-}
-
 // Stats are incomplete, I'd like to collect more data but for now this is all I could think of
 interface Stats {
   EventStats: {
