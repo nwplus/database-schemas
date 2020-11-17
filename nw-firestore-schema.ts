@@ -48,6 +48,13 @@ interface Quicklink {
   common: boolean;
 }
 
+interface Prize {
+  place: number | boolean; // number if a main prize, false if sponsor prize
+  sponsor: string;
+  title: string;
+  content: string[]; 
+}
+
 interface DayOfEvent {
   name: "name";
   type: "notices" | "main" | "workshops" | "minievents";
@@ -84,6 +91,7 @@ interface Hackathon {
   DayOf: DayOfEvent[];
   Announcements: Announcement[];
   Quicklinks: Quicklink[];
+  Prizes: Prize[];
 }
 
 interface Announcement {
