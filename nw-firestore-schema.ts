@@ -168,3 +168,27 @@ interface Livesite {
   hackingStart: string // ISO Date string
   hackingEnd: string // ISO Date string
 }
+
+interface Grade {
+  tech: number
+  design: number
+  functionality: number
+  creativity: number
+  pitch: number
+  notes: string
+  submittedBy: Applicant // reference to Applicant object
+}
+
+interface Project {
+  Grades: Grade[]
+  team: Team // reference to team object
+  description: string
+  youtubeUrl: string
+  devpostUrl: string
+}
+
+interface Team {
+  applicants: string[] // applicant ids
+  name: string
+  project: Project // reference to project object
+}
