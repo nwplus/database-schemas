@@ -66,6 +66,7 @@ type Engagements = facebook | instagram | twitter | medium | linkedin | event
 type ApplicationStatus = applied | accepted | rejected
 
 interface Application {
+  _id: string;  // same as user ID
   basicInfo: {
     email: string;
     firstName: string;
@@ -93,10 +94,13 @@ interface Application {
   questionnaire: {
     engagementSource: Engagements;
     eventsAttended: string[];
-  }
-  submissionDate: timestamp | boolean;
-  submitted: boolean;
-  status: ApplicationStatus = "applied";
+  },
+  submission: {
+    lastUpdated: timestamp | boolean;
+    submitted: boolean;
+    status: ApplicationStatus = "applied";
+  },
+  team: string;
 }
 // Stats are incomplete, I'd like to collect more data but for now this is all I could think of
 interface Stats {
