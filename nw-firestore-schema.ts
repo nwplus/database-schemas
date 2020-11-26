@@ -100,7 +100,7 @@ interface Application {
     submitted: boolean;
     status: ApplicationStatus = "applied";
   },
-  team: string;
+  team: reference;
 }
 // Stats are incomplete, I'd like to collect more data but for now this is all I could think of
 interface Stats {
