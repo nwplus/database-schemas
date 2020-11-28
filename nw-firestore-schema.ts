@@ -119,6 +119,10 @@ interface Stats {
 interface Hackathon {
   id: "lhd"; //(example)
   Applicants: Application[];
+  Deadlines: {
+    applicationsOpen: timestamp;
+    applicationsClose: timestamp;
+  };
   Hackers: Hacker[];
   WebsiteData: WebsiteData;
   Sponsors: Sponsor[];
