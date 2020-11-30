@@ -70,7 +70,7 @@ type HackerRoles = developer | designer | hardware | product | data | business |
 
 type Engagements = facebook | instagram | twitter | medium | linkedin | event
 
-type ApplicationStatus = applied | accepted | rejected
+type ApplicationStatus = applied | accepted | rejected | waitlisted
 
 interface Application {
   _id: string;  // same as user ID
@@ -105,9 +105,12 @@ interface Application {
   submission: {
     lastUpdated: timestamp;
     submitted: boolean;
-    status: ApplicationStatus = "applied";
-    rsvp: boolean | false; // false for no-rsvp by default
   },
+  status: {
+    applicationStatus: ApplicationStatus = "applied";
+    responded: boolean | false; // using responded and attending to check if they un-RSVPed or if they didn't RSVP at all (no RSVP)
+    attending: boolean | false; // false for no-rsvp by default
+  }
   team: reference;
 }
 // Stats are incomplete, I'd like to collect more data but for now this is all I could think of
