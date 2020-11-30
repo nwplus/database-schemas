@@ -103,9 +103,10 @@ interface Application {
     eventsAttended: string[];
   },
   submission: {
-    lastUpdated: timestamp | boolean;
+    lastUpdated: timestamp;
     submitted: boolean;
     status: ApplicationStatus = "applied";
+    rsvp: boolean | false; // false for no-rsvp by default
   },
   team: reference;
 }
@@ -119,10 +120,6 @@ interface Stats {
 interface Hackathon {
   id: "lhd"; //(example)
   Applicants: Application[];
-  Deadlines: {
-    applicationsOpen: timestamp;
-    applicationsClose: timestamp;
-  };
   Hackers: Hacker[];
   WebsiteData: WebsiteData;
   Sponsors: Sponsor[];
