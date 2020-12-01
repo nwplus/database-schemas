@@ -167,6 +167,7 @@ interface Livesite {
   judgingOpen: boolean; // particpants can judge other projects
   judgingReleased: boolean; // participants can see their judging results
   submissionsOpen: boolean; // participants can submit projects
+  applicationsOpen: boolean; // hackers can start applying
   hackathonStart: string // ISO Date string
   hackathonEnd: string // ISO Date string
   hackingStart: string // ISO Date string
