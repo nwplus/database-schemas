@@ -70,7 +70,7 @@ type HackerRoles = developer | designer | hardware | product | data | business |
 
 type Engagements = facebook | instagram | twitter | medium | linkedin | event
 
-type ApplicationStatus = applied | accepted | rejected | waitlisted
+type ApplicationStatus = applied | accepted | rejected | waitlisted | inProgress
 
 interface Application {
   _id: string;  // same as user ID
