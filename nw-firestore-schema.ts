@@ -81,7 +81,7 @@ interface Application {
     gender: string;
     ethnicity: string[];
     isOfLegalAge: boolean;
-    phoneNumber: number;
+    phoneNumber: string;
     school: string;
     major: string;
     educationLevel: EducationLevels = "bachelors";
