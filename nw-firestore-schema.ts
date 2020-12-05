@@ -74,6 +74,7 @@ type ApplicationStatus = applied | accepted | rejected | waitlisted | inProgress
 
 interface Application {
   _id: string;  // same as user ID
+  projectsAssigned: string[] // project ids
   basicInfo: {
     email: string;
     firstName: string;
@@ -186,19 +187,18 @@ interface Grade {
   creativity: number
   pitch: number
   notes: string
-  submittedBy: Applicant // reference to Applicant object
+  submittedBy: string // applicant key / user uid
 }
 
 interface Project {
-  Grades: Grade[]
-  team: Team // reference to team object
+  grades: map // grade objects
+  acknowledged: boolean // devpost checkbox for "Has added all teammates to devpost"
+  countAssigned: number
+  sponsorPrizes: string[]
+  teamMembers: string[]
+  teamMembersEmails: string[]
+  title: string
   description: string
   youtubeUrl: string
   devpostUrl: string
-}
-
-interface Team {
-  applicants: string[] // applicant ids
-  name: string
-  project: Project // reference to project object
 }
