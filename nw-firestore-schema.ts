@@ -1,4 +1,4 @@
-type Tiers = inKind | bronze | silver | gold | platinum 
+type Tiers = inKind | bronze | silver | gold | platinum
 
 interface Sponsor {
   name: "apple";
@@ -15,7 +15,6 @@ interface Event {
   description: "this is an event";
   imgURL?: "link-to-event-image";
   order: "ordering of the event";
-  
 }
 
 interface WebsiteData {
@@ -52,7 +51,7 @@ interface Prize {
   place: number | boolean; // number if a main prize, false if sponsor prize
   sponsor: string;
   title: string;
-  content: string[]; 
+  content: string[];
 }
 
 interface DayOfEvent {
@@ -102,6 +101,7 @@ interface Application {
   questionnaire: {
     engagementSource: Engagements;
     eventsAttended: string[];
+    otherEngagementSource: string;
   },
   submission: {
     lastUpdated: timestamp;
