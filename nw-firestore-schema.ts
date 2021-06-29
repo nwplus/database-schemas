@@ -99,6 +99,13 @@ interface Application {
       ["question number"]: string;
     }; // hackers will have either one or two questions depending on their role
   },
+  score: {
+    websiteScore: number,
+    resumeScore: number,
+    interestScore: number,
+    passionScore: number,
+  },
+  comments: Comment[]; // where Comment = {user: "", text: ""}
   questionnaire: {
     engagementSource: Engagements;
     eventsAttended: string[];
