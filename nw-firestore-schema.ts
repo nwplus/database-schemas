@@ -98,10 +98,10 @@ interface Application {
     }; // hackers will have either one or two questions depending on their role
   },
   score: {
-    WebsiteScore: int,
-    ResumeScore: int,
-    InterestScore: int,
-    PassionScore: int,
+    websiteScore: number,
+    resumeScore: number,
+    interestScore: number,
+    passionScore: number,
   },
   comments: Comment[]; // where Comment = {user: "", text: ""}
   questionnaire: {
