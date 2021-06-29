@@ -1,3 +1,3 @@
 ﻿# database-schemas
 
-Database schema for nwPlus projects
+:zap: Database schema for internal/external nwPlus apps
