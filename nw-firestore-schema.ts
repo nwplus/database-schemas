@@ -63,7 +63,7 @@ interface DayOfEvent {
   description: string;
 }
 
-type Team = "Dev" | "Design" | "Marketing" | "Content Writing" | "cmd-f" | "Hackcamp" | "nwHacks" | "Engagement" | "Sponsorship"
+type Team = "Pres" | "Dev" | "Design" | "Marketing" | "Content Writing" | "cmd-f" | "Hackcamp" | "nwHacks" | "Engagement" | "Sponsorship"
 
 type Section = "Github" | "Resume" | "Portfolio" | "Long Answer 1" | "Long Answer 2"
 
