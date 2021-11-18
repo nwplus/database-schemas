@@ -63,6 +63,33 @@ interface DayOfEvent {
   description: string;
 }
 
+type Team = "Pres" | "Dev" | "Design" | "Marketing" | "Content Writing" | "cmd-f" | "Hackcamp" | "nwHacks" | "Engagement" | "Sponsorship"
+
+type Section = "Github" | "Resume" | "Portfolio" | "Long Answer 1" | "Long Answer 2"
+
+interface ApplicationRange {
+  start: number;
+  end: number;
+}
+
+interface SectionsAssigned {
+  section: Section;
+  applicationRange: ApplicationRange[];
+}
+
+interface HackathonEvaluations {
+  evaluationsInfo: {
+    sectionsAssigned: SectionsAssigned[];
+    assigned: number;
+    completed: number;
+  }
+}
+
+interface Admin {
+  team: Team;
+  hackathonEvaluations: HackathonEvaluations[];
+}
+
 type EducationLevels = highSchool | undergraduate | graduate | professional | doctorate
 
 type HackerRoles = developer | designer | hardware | product | data | business | other
@@ -73,6 +100,7 @@ type ApplicationStatus = applied | accepted | rejected | waitlisted | inProgress
 
 interface Application {
   _id: string;  // same as user ID
+  numericalId: number;
   projectsAssigned: string[] // project ids
   basicInfo: {
     email: string;
@@ -100,10 +128,11 @@ interface Application {
     }; // hackers will have either one or two questions depending on their role
   },
   score: {
-    websiteScore: number,
-    resumeScore: number,
-    interestScore: number,
-    passionScore: number,
+    githubOrWebsiteScore: number;
+    resumeScore: number;
+    longAnswerOneScore: number;
+    longAnswerTwoScore: number;
+    tags: string[];
   },
   comments: Comment[]; // where Comment = {user: "", text: ""}
   questionnaire: {
